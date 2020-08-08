@@ -6,7 +6,7 @@ RUN apt-get update -y \
     && apt-get dist-upgrade -y
     
 RUN apt-get update -y \
-    && apt-get install -y wget lib32gcc1
+    && apt-get install -y wget lib32gcc1 gosu
 
 RUN mkdir -p /usr/local/bin \
     && cd /usr/local/bin \
