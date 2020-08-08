@@ -1,0 +1,19 @@
+
+version: '2'
+
+services:
+  eco:
+    image: docker.pkg.github.com/flow86/ecogameserver/eco-docker:latest
+    restart: unless-stopped
+
+    mem_limit: 8g
+    user: 0:0
+
+    ports:
+      - 3000:3000/udp
+      - 3001:3001
+
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      - /srv/eco:/srv/eco
