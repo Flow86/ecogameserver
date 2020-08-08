@@ -28,6 +28,7 @@ COPY update.steam /update.steam
 USER 1000
 
 WORKDIR /srv/eco
+VOLUME [ "/srv/eco" ]
 ENTRYPOINT [ "/entrypoint.sh" ]
 CMD [ "/steam.sh" ]
 EXPOSE 3000/udp 3001/tcp
