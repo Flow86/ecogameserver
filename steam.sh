@@ -15,4 +15,4 @@ if [ -x /srv/eco/local.sh ] ; then
   bash /srv/eco/local.sh
 fi
 
-exec mono /srv/eco/EcoServer.exe $PARAMS
+exec /srv/eco/EcoServer $PARAMS
